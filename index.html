@@ -47,6 +47,9 @@
                     let q4Response = $('input[name=q4]:checked').val();
                     let q6Response = $('#q6').val().toLowerCase();
                     let q7Response = $('#q7').val();
+                    let q8Response = $('#q8').val();
+                    let q9Response = $('#q9').val();
+                    let q10Response = $('#q10').val();
                     
                     if(q1Response == 'sacramento'){
                         rightAnswer(1);
@@ -81,7 +84,7 @@
                         wrongAnswer(5);
                     }
                     
-                    if(q6Response == 'carson city'){
+                    if(q6Response == 'montgomery'){
                         rightAnswer(6);
                     }else{
                         wrongAnswer(6);
@@ -93,14 +96,25 @@
                         wrongAnswer(7);
                     }
                     
-                    if($('#arms').is(':checked') 
-                    && $('#jeopardy').is(':checked') 
-                    && !$('#slavery').is(':checked') 
-                    && !$('#prohibition').is(':checked')){
+                    if(q8Response == 't'){
                         rightAnswer(8);
                     }else{
                         wrongAnswer(8);
                     }
+                    
+                    if(q9Response == 'gw'){
+                        rightAnswer(9);
+                    }else{
+                        wrongAnswer(9);
+                    }
+                    
+                    if(q10Response == 'th'){
+                        rightAnswer(10);
+                    }else{
+                        wrongAnswer(10);
+                    }
+                    
+                    
                     
                     if(score >= 80){
                         $('#totalScore').attr('class', 'text-info');
@@ -185,13 +199,13 @@
         <div id="q5Feedback"></div>
         <br><br>
         
-        <h3><span id='markImg6'></span>What is the Capital of Nevada?</h3>
+        <h3><span id='markImg6'></span>What is the Capital of Alabama?</h3>
         <input type='text' id='q6'>
         <br><br>
         <div id="q6Feedback"></div>
         <br><br>
         
-        <h3><span id='markImg7'></span>Benjamin Franklin was never a President. (True/False)</h3>
+        <h3><span id='markImg7'></span>Barack Obama is the 44th president. (True/False)</h3>
         <select id=q7>
             <option value =''>Select One</option>
             <option value ='t'>True</option>
@@ -201,13 +215,35 @@
         <br><br>
         
         
-        <h3><span id='markImg8'></span>Which of these are addressed in the first 10 Amendments (the Bill of Rights)?</h3>
-        <input type='checkbox' id = 'arms'>  <label for="arm">The Right to Bear Arms</label>
-        <input type='checkbox' id = 'slavery'> <label for="slavery">Abolition of Slavary and Involuntary Servitude </label>
-        <input type='checkbox' id = 'prohibition'><label for="prohibition">Prohibition of Alcohol </label>
-        <input type='checkbox' id = 'jeopardy'><label for="jeopardy">Double Jeopardy</label>
-        <br>
+        <h3><span id='markImg8'></span>There are 3 branches of government. (True/False)</h3>
+        <select id=q8>
+        <option value =''>Select One</option>
+        <option value ='t'>True</option>
+        <option value ='f'>False</option>
+        </select>
         <div id="q8Feedback"></div>
+        <br><br>
+        
+        <h3><span id='markImg9'></span>Who was the first president of the Unites States?</h3>
+        <select id=q9>
+            <option value =''>Select One</option>
+            <option value ='gw'>George Washington</option>
+            <option value ='ae'>Albert Einstein</option>
+            <option value ='sj'>Stanley Johnson</option>
+            <option value ='yg'>Young George</option>
+        </select>
+        <div id="q9Feedback"></div>
+        <br><br>
+        
+           <h3><span id='markImg10'></span>How many branches are in the government?</h3>
+        <select id=q10>
+            <option value =''>Select One</option>
+            <option value ='th'>Three</option>
+            <option value ='fo'>Four</option>
+            <option value ='tw'>Two</option>
+            <option value ='si'>Six</option>
+        </select>
+        <div id="q10Feedback"></div>
         <br><br>
         
         
